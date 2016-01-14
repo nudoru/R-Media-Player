@@ -1,0 +1,56 @@
+@import "../base/all"
+@import "../pages/application"
+@import "../utils/shadows"
+@import "../utils/css-animation"
+@import "../utils/variables"
+@import "../utils/responsive"
+@import "../forms/buttons"
+
+$player-width: 350px
+$player-button-width: 135px
+$player-progress-width: $player-width - $player-button-width - ($half-base-line-height * 6)
+
+.mediaPlayer__container
+  position: relative
+  display: block
+  margin-bottom: $double-base-line-height
+
+.mediaPlayer__ui-frame
+  +shadow__one-edge-faint
+  position: relative
+  overflow: hidden
+  width: $player-width
+  margin: 0 auto
+  padding: $half-base-line-height
+  border-radius: 100px
+  border: 1px solid rgba(0, 0, 0, .2)
+  background: rgba(0, 0, 0, .25)
+  text-align: left
+  button
+    @extend .nuButton
+    position: relative
+    left: 0
+    margin: 0
+    margin-right: $base-line-height
+    width: 135px
+  progress
+    -webkit-appearance: none
+      -moz-appearance: none
+    appearance: none
+    margin: 0
+    padding: 0
+    border: none
+    width: $player-progress-width
+    height: $half-base-line-height
+
+.mediaPlayer__image-container
+  text-align: center
+  width: 100%
+  margin-bottom: $double-base-line-height
+
+
+.mediaPlayer__image
+  +shadow__one-edge
+  height: auto
+  max-width: 100%
+  border: 5px solid #fff

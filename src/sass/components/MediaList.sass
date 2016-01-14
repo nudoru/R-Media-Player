@@ -1,0 +1,72 @@
+@import "../base/all"
+@import "../pages/application"
+@import "../utils/shadows"
+@import "../utils/css-animation"
+@import "../utils/variables"
+@import "../utils/responsive"
+
+.mediaList__container
+  @extend %small-headers
+  position: absolute
+  top: 0
+  left: 0
+  width: $medialist-width
+  bottom: 0
+  overflow-y: auto
+  background: $color-white-grey-line linear-gradient(hsla(0,0%,100%, .5), transparent)
+
+  h1,h2,h3,h4,h5,h6,p
+    padding: 0
+    margin: 0
+  +min-width($mqbp-huge)
+    width: $medialist-width-lg
+  +max-width($mqbp-small)
+    width: 100%
+    position: relative
+    top: auto
+    left: auto
+    bottom: auto
+
+.mediaList__item
+  +transition-all()
+  position: relative
+  cursor: pointer
+  margin: $half-base-line-height
+  padding: $base-line-height
+  padding-left: $base-line-height * 1.5
+  padding-bottom: $half-base-line-height
+  background-color: #fff
+  border: 1px solid $color-nocolor
+  h1
+    font-size: $ms-1
+    color: $light-blue
+    padding-top: $base-line-height
+    padding-bottom: $base-line-height
+    line-height: $double-base-line-height
+  h2
+    font-size: .9rem
+    color: $dark-blue
+    margin-bottom: $base-line-height
+  p
+    font-size: .8rem
+    color: $dark-warm-grey
+    line-height: $base-line-height*1.75
+  &:hover
+    +shadow__one-edge-faint
+    border: 1px solid $light-blue
+  +max-width($mqbp-small)
+    p
+      display: none
+
+.mediaList__item-metadata
+  @extend .list-comma-separated
+  margin-top: $base-line-height
+  border-top: 1px solid $color-white-grey-line
+  li
+    color: $light-cool-grey
+    margin: 0
+    font-size: .7rem
+    text-transform: uppercase
+
+
+

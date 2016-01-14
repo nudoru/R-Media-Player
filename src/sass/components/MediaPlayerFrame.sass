@@ -1,0 +1,39 @@
+@import "../base/all"
+@import "../pages/application"
+@import "../utils/shadows"
+@import "../utils/css-animation"
+@import "../utils/variables"
+@import "../utils/responsive"
+@import "../utils/typography"
+
+.mediaPlayerFrame__container
+  padding: $base-line-height*2
+  margin: 0
+  background: $dark-warm-grey linear-gradient(hsla(0,0%,100%, .25), transparent)
+  position: absolute
+  top: 0
+  left: $medialist-width
+  right: 0
+  bottom: 0
+  overflow-y: auto
+  h1,h2,h3,h4,h5,h6,p,li
+    color: #fff
+  h1
+    +shadow__text-big_soft
+    font-size: $ms-2
+    padding-bottom: $half-base-line-height
+    margin-bottom: $half-base-line-height
+    border-bottom: 1px solid $light-warm-grey
+  h2
+    font-size: $ms-0
+  +min-width($mqbp-huge)
+    left: $medialist-width-lg
+  +max-width($mqbp-small)
+    width: 100%
+    position: relative
+    top: auto
+    left: auto
+    right: auto
+    bottom: auto
+  audio
+    text-align: center

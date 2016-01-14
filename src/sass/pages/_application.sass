@@ -1,0 +1,52 @@
+@import "../utils/variables"
+@import "../utils/image-cover"
+
+//------------------------------------------------------------------------------
+//  Scaffold
+//------------------------------------------------------------------------------
+
+// Some options to support the mobile app / drawer structure
+
+body
+  background-color: $color-white-grey-fill
+  height: 100%
+  min-height: 100%
+
+//#application
+//  height: 100%
+//  min-height: 100%
+
+//#app__container
+//  position: fixed
+//  top: 0
+//  left: 0
+//  right: 0
+//  bottom: 0
+//  overflow: hidden
+//
+//#app__contents
+//  position: absolute
+//  bottom: 100%
+//  min-height: 100%
+//  top: 0
+//  left: $app-drawer-width
+//  right: 0
+//  overflow-y: auto
+
+.app__column
+  display: block
+  width: $app-column-width
+  margin: 0 auto
+  padding: $double-base-line-height
+
+.app__padded-content
+  padding: $double-base-line-height
+
+.app__content
+  position: absolute
+  top: $app-header-height
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #fff
+
