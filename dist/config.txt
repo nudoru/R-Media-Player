@@ -1,5 +1,6 @@
 {
   "title": "Media Player 2000",
+  "introduction": "<h1>Welcome!</h1><p>This is some introductory messaging.</p>",
   "media": [
     {
       "id": "media1",
@@ -7,8 +8,9 @@
       "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       "coverImage": "img/placeholder.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque diam orci, rutrum non ipsum sed, fringilla tincidunt nisl. Phasellus imperdiet nunc quis velit rutrum, eget consequat quam pretium. Mauris sodales volutpat velit in suscipit. Sed non lacinia felis. Sed sed pharetra leo, eget posuere dui.",
-      "playingImage": "https://placeimg.com/640/400/arch/grayscale",
-      "mediaURL":"http://university.tiaa-cref.org/player/assets/sample.mp3",
+      "playingImage": "http://lorempixel.com/640/400/business/",
+      "mediaURL":"http://www.moviewavs.com/0053148414/MP3S/Movies/2001/hal-fool.mp3",
+      "material":"http://www.adobe.com/content/dam/Adobe/en/products/creativesuite/production/cs6/pdfs/adobe-hardware-performance-whitepaper.pdf",
       "type": "audio",
       "duration": "4:41"
     },
@@ -18,8 +20,9 @@
       "title": "Curabitur eu tortor vitae nisi aliquam accumsan et et dolor",
       "coverImage": "img/placeholder.png",
       "description": "Quisque ac dui vehicula dolor sollicitudin tristique sed eget neque. Duis quis metus urna. Aliquam libero nisl, fringilla in velit id, varius varius mi.",
-      "playingImage": "https://placeimg.com/640/400/arch/grayscale",
-      "mediaURL":"http://university.tiaa-cref.org/player/assets/sample.mp3",
+      "playingImage": "",
+      "mediaURL":"http://www.moviewavs.com/0053148414/MP3S/Movies/2001/disconne.mp3",
+      "material":"http://www.adobe.com/content/dam/Adobe/en/products/creativesuite/production/cs6/pdfs/adobe-hardware-performance-whitepaper.pdf",
       "type": "audio",
       "duration": "4:42"
     },
@@ -29,8 +32,9 @@
       "title": "Morbi sed sem a massa ultricies ullamcorper",
       "coverImage": "img/placeholder.png",
       "description": "Sed tristique, neque nec interdum aliquet, dolor lorem tincidunt nulla, ut scelerisque ligula odio nec eros. Sed et lorem urna. Morbi volutpat dignissim ipsum, id tempor neque pretium a. Fusce tincidunt dictum metus, quis imperdiet nibh placerat eget. Nulla mattis mi eu ullamcorper ultricies.",
-      "playingImage": "https://placeimg.com/640/400/arch/grayscale",
-      "mediaURL":"http://university.tiaa-cref.org/player/assets/sample.mp3",
+      "playingImage": "http://lorempixel.com/440/500/business/",
+      "mediaURL":"http://www.moviewavs.com/0053148414/MP3S/Movies/2001/hal-firs.mp3",
+      "material":"",
       "type": "audio",
       "duration": "4:43"
     },
@@ -40,8 +44,9 @@
       "title": "Cras volutpat mauris non est blandit pharetra",
       "coverImage": "img/placeholder.png",
       "description": "Curabitur ultrices quis velit sed malesuada. Aliquam erat volutpat. Cras quis enim tellus. Praesent scelerisque diam quis magna laoreet consectetur. Sed egestas lobortis neque, sit amet pretium nisl dignissim et. Aliquam at tortor non arcu iaculis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus sit amet orci diam. Sed ut nisl pharetra, gravida mauris in, ultricies mi. Nunc placerat enim quis ligula aliquam gravida vitae ac augue. Nunc eleifend ante id bibendum mattis. Donec dapibus eleifend mi et dapibus. Nunc ut bibendum ex. Proin condimentum neque magna, sed dapibus erat eleifend vel. Suspendisse sit amet tempus elit. Aenean non diam quis elit vulputate posuere sit amet non lacus.",
-      "playingImage": "https://placeimg.com/640/400/arch/grayscale",
-      "mediaURL":"http://university.tiaa-cref.org/player/assets/sample.mp3",
+      "playingImage": "http://lorempixel.com/40/400/business/",
+      "mediaURL":"http://www.moviewavs.com/0053148414/MP3S/Movies/2001/hal-fool.mp3",
+      "material":"",
       "type": "audio",
       "duration": "4:41"
     },
@@ -51,8 +56,9 @@
       "title": "Pellentesque sed mauris ut ante sollicitudin dictum at in odio",
       "coverImage": "img/placeholder.png",
       "description": "Duis vel risus finibus, bibendum justo non, mattis nisi.",
-      "playingImage": "https://placeimg.com/640/400/arch/grayscale",
-      "mediaURL":"http://university.tiaa-cref.org/player/assets/sample.mp3",
+      "playingImage": "http://lorempixel.com/640/400/business/",
+      "mediaURL":"http://www.moviewavs.com/0053148414/MP3S/Movies/2001/hal-fool.mp3",
+      "material":"",
       "type": "audio",
       "duration": "4:42"
     },
@@ -62,8 +68,9 @@
       "title": "Nullam maximus nulla vel velit molestie fringilla",
       "coverImage": "img/placeholder.png",
       "description": "Nam pharetra nec erat porta sodales. Phasellus rutrum euismod nunc sit amet vestibulum. Morbi tincidunt risus at interdum suscipit.",
-      "playingImage": "https://placeimg.com/640/400/arch/grayscale",
-      "mediaURL":"http://university.tiaa-cref.org/player/assets/sample.mp3",
+      "playingImage": "http://lorempixel.com/640/400/business/",
+      "mediaURL":"http://www.moviewavs.com/0053148414/MP3S/Movies/2001/hal-fool.mp3",
+      "material":"",
       "type": "audio",
       "duration": "4:43"
     }

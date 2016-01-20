@@ -11,13 +11,19 @@ export default class MediaListItem extends React.Component {
     AppStore.dispatch(Actions.setMedia(this.props.id));
   }
 
+  /*
+   <ul className="mediaList__item-metadata">
+   <li>{this.props.type}</li>
+   <li>{this.props.duration}</li>
+   </ul>
+   */
   render() {
-    let maxLen = 140,
+    let maxLen        = 140,
         shortenedText = this.props.description;
 
     // Cap the description length
-    if(shortenedText.length > maxLen) {
-      shortenedText = shortenedText.substring(0,maxLen) + ' ...';
+    if (shortenedText.length > maxLen) {
+      shortenedText = shortenedText.substring(0, maxLen) + ' ...';
     }
 
     return (
@@ -25,10 +31,6 @@ export default class MediaListItem extends React.Component {
         <h1>{this.props.title}</h1>
         <h2>{this.props.date}</h2>
         <p>{shortenedText}</p>
-        <ul className="mediaList__item-metadata">
-          <li>{this.props.type}</li>
-          <li>{this.props.duration}</li>
-        </ul>
       </div>
     );
   }

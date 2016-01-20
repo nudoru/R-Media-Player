@@ -21,12 +21,10 @@ export default class MediaAudioPlayer extends React.Component {
 
   // Seek to position on progress bar click
   onProgressClick(e) {
-    console.log('progress click');
     let barWidth       = e.currentTarget.offsetWidth,
         parentPosition = this.getPosition(e.currentTarget),
         barClickPos    = e.clientX - parentPosition.x,
         seekPos        = (barClickPos / barWidth);
-    console.log(barWidth, barClickPos, seekPos);
     this.refs.player.seekTo(seekPos);
   }
 
