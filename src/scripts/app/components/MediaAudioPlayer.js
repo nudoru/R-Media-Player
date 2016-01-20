@@ -12,11 +12,35 @@ export default class MediaAudioPlayer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      url:     null,
+      url    : null,
       playing: false,
-      played:  0,
-      loaded:  0
+      played : 0,
+      loaded : 0
     };
+  }
+
+  // Seek to position on progress bar click
+  onProgressClick(e) {
+    console.log('progress click');
+    let barWidth       = e.currentTarget.offsetWidth,
+        parentPosition = this.getPosition(e.currentTarget),
+        barClickPos    = e.clientX - parentPosition.x,
+        seekPos        = (barClickPos / barWidth);
+    console.log(barWidth, barClickPos, seekPos);
+    this.refs.player.seekTo(seekPos);
+  }
+
+  // Calculate the x and y positions of the client event on an element
+  getPosition(element) {
+    var xPosition = 0;
+    var yPosition = 0;
+
+    while (element) {
+      xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+      yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+      element = element.offsetParent;
+    }
+    return {x: xPosition, y: yPosition};
   }
 
   onPlayPauseClick() {
@@ -29,13 +53,16 @@ export default class MediaAudioPlayer extends React.Component {
   }
 
   play() {
-    this.setState({playing: true})
+    this.setState({playing: true});
   }
 
   stop() {
-    this.setState({playing: false})
+    this.setState({playing: false});
   }
 
+  //<progress max={1} value={this.state.played}/>
+  //(this.state.played*100)
+  //<button onClick={this.onPlayPauseClick.bind(this)}>{this.state.playing ? 'Pause' : 'Play'}</button>
   render() {
     return (
       <div className="mediaPlayer__container">
@@ -53,15 +80,19 @@ export default class MediaAudioPlayer extends React.Component {
           onProgress={this.onProgress.bind(this)}
         />
 
-
-
         <div className="mediaPlayer__image-container">
           <img className="mediaPlayer__image"
                src={this.props.mediaData.playingImage}/>
           <div className="mediaPlayer__ui-frame">
             <button
-              onClick={this.onPlayPauseClick.bind(this)}>{this.state.playing ? 'Pause' : 'Play'}</button>
-            <progress max={1} value={this.state.played}/>
+              onClick={this.onPlayPauseClick.bind(this)}>
+              <div
+                className={this.state.playing ? 'mediaPlayer__icon-pause' : 'mediaPlayer__icon-play'}></div>
+            </button>
+            <div className="mediaPlayer__progress"
+                 onClick={this.onProgressClick.bind(this)}>
+              <span style={{width: (this.state.played*100)+'%'}}></span>
+            </div>
           </div>
         </div>
       </div>

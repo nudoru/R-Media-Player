@@ -9,48 +9,80 @@
 $player-width: 350px
 $player-button-width: 135px
 $player-progress-width: $player-width - $player-button-width - ($half-base-line-height * 6)
+$player-min-width: 200px
+$player-progress-height: 7px
+$player-play-icon-color: #fff
 
 .mediaPlayer__container
+  +shadow__card-large
   position: relative
   display: block
   margin-bottom: $double-base-line-height
+  border-radius: $base-line-height
+  background: $light-warm-grey
+  overflow: hidden
+  min-height: 65px
 
 .mediaPlayer__ui-frame
-  +shadow__one-edge-faint
-  position: relative
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
   overflow: hidden
-  width: $player-width
+  //max-width: 100%
+  //min-width: $player-min-width
   margin: 0 auto
-  padding: $half-base-line-height
-  border-radius: 100px
-  border: 1px solid rgba(0, 0, 0, .2)
-  background: rgba(0, 0, 0, .25)
-  text-align: left
+  padding: $player-progress-height * 2
+  padding-bottom: $player-progress-height
+  background: rgba(255,255,255,.85) linear-gradient(hsla(0,0%,100%, .2), hsla(0,0%,0%, .2))
+  text-align: center
   button
-    @extend .nuButton
-    position: relative
-    left: 0
+    @extend .nuButton-round
+    +shadow__one-edge-faint
     margin: 0
-    margin-right: $base-line-height
-    width: 135px
-  progress
-    -webkit-appearance: none
-      -moz-appearance: none
-    appearance: none
-    margin: 0
-    padding: 0
-    border: none
-    width: $player-progress-width
-    height: $half-base-line-height
+    margin-bottom: $half-base-line-height
 
 .mediaPlayer__image-container
   text-align: center
-  width: 100%
-  margin-bottom: $double-base-line-height
-
+  //width: 100%
 
 .mediaPlayer__image
-  +shadow__one-edge
+  +shadow__card-large
   height: auto
   max-width: 100%
-  border: 5px solid #fff
+
+.mediaPlayer__progress
+  width: 100%
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: $player-progress-height
+  background: rgba(255,255,255,.5)
+  //box-shadow: inset 0 1px 3px rgba(0,0,0,0.3)
+  overflow: hidden
+  text-align: center
+
+.mediaPlayer__progress > span
+  +transition-all(250ms)
+  pointer-events: none
+  position: relative
+  display: block
+  height: $player-progress-height
+  background-color: $light-blue
+  overflow: hidden
+
+.mediaPlayer__icon-play
+  margin-left: 13px
+  width: 12px
+  height: 16px
+  border-top: 8px solid transparent
+  border-left: 12px solid $player-play-icon-color
+  border-bottom: 8px solid transparent
+
+.mediaPlayer__icon-pause
+  margin-left: 12px
+  width: 11px
+  height: 14px
+  border-right: 4px solid $player-play-icon-color
+  border-left: 4px solid $player-play-icon-color

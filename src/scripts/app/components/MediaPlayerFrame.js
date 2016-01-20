@@ -32,14 +32,14 @@ export default class MediaPlayerFrame extends React.Component {
         <div className="mediaPlayerFrame__container">
           <h1>{this.state.title}</h1>
           <h2>{this.state.date}</h2>
-            <MediaAudioPlayer mediaData={this.state} />
+          <MediaAudioPlayer mediaData={this.state}/>
           <p>{this.state.description}</p>
         </div>
       );
     } else {
+      // Setting innerhtml https://facebook.github.io/react/docs/jsx-gotchas.html
       return (
-        <div className="mediaPlayerFrame__container">
-          <h3>Select an entry from the list to view.</h3>
+        <div className="mediaPlayerFrame__container" dangerouslySetInnerHTML={{__html: AppStore.getState().config.introduction}}>
         </div>
       );
     }
