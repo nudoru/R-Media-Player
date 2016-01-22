@@ -28,12 +28,9 @@ export default class MediaPlayerFrame extends React.Component {
   }
 
   render() {
-    console.log('MP Frame Rendering', this.state);
-
     // TODO combine return statements
     if (this.state.title) {
       let materialsButtons;
-      console.log('matierals?', this.state.material);
       if (this.state.material) {
         materialsButtons = <div className="text-center margin-bottom-double">
           <button onClick={this.onMaterialsClick.bind(this)}
@@ -59,7 +56,5 @@ export default class MediaPlayerFrame extends React.Component {
         </div>
       );
     }
-
-
   }
 }

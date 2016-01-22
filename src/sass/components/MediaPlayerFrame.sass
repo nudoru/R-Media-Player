@@ -9,22 +9,27 @@
 .mediaPlayerFrame__container
   padding: $base-line-height*2
   margin: 0
-  background: $dark-warm-grey linear-gradient(hsla(0,0%,100%, .25), transparent)
+  //background: $dark-warm-grey linear-gradient(hsla(0,0%,100%, .25), transparent)
+  background: #fff
   position: absolute
   top: 0
   left: $medialist-width
   right: 0
   bottom: 0
   overflow-y: auto
-  h1,h2,h3,h4,h5,h6,p,li
-    color: #fff
+  //h1,h2,h3,h4,h5,h6,p,li
+  //  color: #fff
+  h1,h2,h3,h4,h5,h6
+    color: $dark-blue
+  h2
+    color: $light-blue
   h1
-    +shadow__text-big_soft
+    //+shadow__text-big_soft
     font-size: $ms-3
     line-height: $base-line-height*4
     padding-bottom: $half-base-line-height
     margin-bottom: $half-base-line-height
-    border-bottom: 1px solid $light-warm-grey
+    //border-bottom: 1px solid $light-warm-grey
   h2
     font-size: $ms-0
   +min-width($mqbp-huge)

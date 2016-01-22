@@ -1,6 +1,6 @@
 {
   "title": "Media Player 2000",
-  "introduction": "<h1>Welcome!</h1><p>This is some introductory messaging.</p>",
+  "introduction": "<h1>Select an event from the left.</h1>",
   "media": [
     {
       "id": "media1",
