@@ -127,8 +127,10 @@ export default {
       if (json && method !== "GET") {
         xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
       } else if (json && method === "GET") {
-        //, text/*
-        xhr.setRequestHeader("Accept", "application/json; odata=verbose");  // odata param for Sharepoint
+        //, text/* application/json
+        // Because the media player will be (ideally) hosted on SharePoint, accept type is text
+        // SharePoint doesn't allow .json files to be uploaded so we use a .txt file
+        xhr.setRequestHeader("Accept", "text/*; odata=verbose");  // odata param for Sharepoint
       }
 
       xhr.send(data);

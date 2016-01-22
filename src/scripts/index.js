@@ -1,3 +1,8 @@
+/**
+ * Media Player application
+ * Matt Perkins, hello@mattperkins.me
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AppStore from './app/stores/AppStore';
@@ -9,7 +14,7 @@ require('es6-promise').polyfill();
 
 // For IE11
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
-if (typeof Object.assign != 'function') {
+if (typeof Object.assign !== 'function') {
   (function () {
     Object.assign = function (target) {
       'use strict';
@@ -33,4 +38,9 @@ if (typeof Object.assign != 'function') {
   })();
 }
 
+/**
+ * SharePoint doesn't allow uploading .json files so we use a .txt file.
+ * Note, made change to nori/rest module to change accept header to text/* to
+ * accommodate
+ */
 ReactDOM.render(<ApplicationContainer config="config.txt"/>, document.querySelector('#application'));
